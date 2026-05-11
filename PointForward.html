@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="PointForward: Feedforward Driving Reconstruction through Point-Aligned Representations">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PointForward</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MRXX9040L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3MRXX9040L');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span class="pointforward-text">PointForward</span>: Feedforward Driving Reconstruction through Point-Aligned Representations
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Cheng Chi</a><sup>1 *</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Xianqi Wang</a><sup>2, 1 *</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Hongcheng Luo</a><sup>1 * †</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Mingfei Tu</a><sup>1</sup></span>
+            <br>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Gangwei Xu</a><sup>2</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Zehan Zhang</a><sup>1</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Bing Wang</a><sup>1</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Guang Chen</a><sup>1</sup></span>
+            <br>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Hangjun Ye</a><sup>1</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Sida Peng</a><sup>3</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Xin Yang</a><sup>2 ✉</sup></span>
+            <span class="author-block" style="margin-right: 20px;">
+              <a>Haiyang Sun</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+            <span class="author-block"><sup>1</sup>Xiaomi EV,</span>
+            <span class="author-block" style="margin-left: 10px;"><sup>2</sup>Huazhong University of Science and Technology,</span>
+            <span class="author-block" style="margin-left: 10px;"><sup>3</sup>Zhejiang University</span>
+          </div>
+
+          <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+            <span class="author-block"><sup>*</sup>Equal contribution,</span>
+            <span class="author-block" style="margin-left: 10px;"><sup>†</sup>Project leader,</span>
+            <span class="author-block" style="margin-left: 10px;"><sup>✉</sup>Corresponding author</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- arXiv Link -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded"
+                   style="background-color: #bbb; color: white; border-color: transparent;">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-wrapper">
+
+    <!-- Abstract Card -->
+    <div class="section-card">
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          High-fidelity reconstruction of driving scenes is crucial for autonomous driving. While recent feedforward 3D Gaussian Splatting (3DGS) methods enable fast reconstruction, their per-pixel Gaussian prediction paradigm often suffers from multi-view inconsistency and layering artifacts. Moreover, existing methods often model dynamic instances via dense flow prediction, which lacks explicit cross-view correspondence and instance-level consistency. In this paper, we propose PointForward, a feedforward driving reconstruction framework through point-aligned representations. Unlike pixel-aligned methods, we initialize sparse 3D queries in world space and aggregate multi-view image information via spatial-temporal fusion onto these queries, enforcing explicit cross-view consistency in a single feedforward pass. To handle scene dynamics, we introduce scene graphs that explicitly organize moving instances during reconstruction. By leveraging 3D bounding boxes, our method enables instance-level motion propagation and temporally consistent dynamic representations. Extensive experiments demonstrate that PointForward achieves state-of-the-art performance on large-scale driving benchmarks. The code will be available upon the publication of the paper.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pipeline Card -->
+    <div class="section-card">
+      <h2 class="title is-3">Pipeline</h2>
+      <img src="./static/images/Overview.png" class="pipeline-img" alt="PointForward Pipeline">
+      <p class="has-text-justified" style="margin-top: 30px; line-height: 1.7; color: #444;">
+        We initialize sparse 3D queries in world space and project them onto multi-view image planes to aggregate features and geometric cues. A spatial-temporal fusion module produces coherent point-aligned representations, while scene-graph-based dynamic modeling ensures instance-level motion consistency for rendering dynamic driving scenes.
+      </p>
+    </div>
+
+    <!-- Videos Card -->
+    <div class="section-card">
+      <h2 class="title is-3">Qualitative Comparison</h2>
+        <video poster="" id="scene0" autoplay controls muted loop playsinline>
+          <source src="./static/videos/PointForward.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- BibTeX Card -->
+    <div class="section-card" id="BibTeX">
+      <h2 class="title is-5 bibtex-title">BibTeX</h2>
+      <div class="bibtex-wrapper">
+        <button class="btn-copy-bibtex" onclick="copyBibtex()">Copy</button>
+        <pre><code id="bibtex-code">
+        </code></pre>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This webpage template is based on <a href="https://streetforward.github.io/">StreetForward</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function copyBibtex() {
+  var code = document.getElementById('bibtex-code').innerText;
+  navigator.clipboard.writeText(code).then(function() {
+    var btn = document.querySelector('.btn-copy-bibtex');
+    btn.textContent = 'Copied';
+    setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+  });
+}
+
+function showQCTab(btn, panelId) {
+  document.querySelectorAll('.qc-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.querySelectorAll('.qc-tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  btn.classList.add('active');
+  var panel = document.getElementById(panelId);
+  panel.classList.add('active');
+
+  panel.querySelectorAll('video').forEach(function(v) {
+    v.currentTime = 0;
+    v.play().catch(function(){});
+  });
+
+  if (panelId === 'qc-temporal') {
+    setTimeout(function() {
+      var container = document.querySelector('#qc-temporal .gallery-container');
+      if (container) setupGallery(container);
+    }, 0);
+  }
+}
+
+function setupGallery(container) {
+  var grid = container.querySelector('.demo-grid');
+  var prevBtn = container.querySelector('.gallery-arrow.prev');
+  var nextBtn = container.querySelector('.gallery-arrow.next');
+  var items = grid ? grid.querySelectorAll('.demo-item') : [];
+  var dots = document.querySelectorAll('#temporal-dots .gallery-dot');
+
+  if (!grid || !prevBtn || !nextBtn || items.length === 0) return;
+
+  var itemCount = items.length;
+  var currentIndex = parseInt(grid.dataset.index || '0');
+
+  function scrollAmount() { return items[0].offsetWidth; }
+
+  function goTo(index) {
+    currentIndex = Math.max(0, Math.min(index, itemCount - 1));
+    grid.dataset.index = currentIndex;
+    grid.style.transform = 'translateX(-' + (currentIndex * scrollAmount()) + 'px)';
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= itemCount - 1;
+    dots.forEach(function(d, i) { d.classList.toggle('active', i === currentIndex); });
+  }
+
+  prevBtn.onclick = function() { goTo(currentIndex - 1); };
+  nextBtn.onclick = function() { goTo(currentIndex + 1); };
+  dots.forEach(function(d) {
+    d.onclick = function() { goTo(parseInt(d.dataset.index)); };
+  });
+  goTo(currentIndex);
+}
+
+// Fade-in on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.section-card').forEach(function(el) {
+    observer.observe(el);
+  });
+});
+</script>
+
+</body>
+</html>
