@@ -54,7 +54,7 @@
             <span class="author-block" style="margin-right: 20px;">
               <a>Xianqi Wang</a><sup>2, 1 *</sup></span>
             <span class="author-block" style="margin-right: 20px;">
-              <a>Hongcheng Luo</a><sup>1 * †</sup></span>
+              <a>Hongcheng Luo</a><sup>1 *</sup></span>
             <span class="author-block" style="margin-right: 20px;">
               <a>Mingfei Tu</a><sup>1</sup></span>
             <br>
@@ -72,7 +72,7 @@
             <span class="author-block" style="margin-right: 20px;">
               <a>Sida Peng</a><sup>3</sup></span>
             <span class="author-block" style="margin-right: 20px;">
-              <a>Xin Yang</a><sup>2 ✉</sup></span>
+              <a>Xin Yang</a><sup>2</sup></span>
             <span class="author-block" style="margin-right: 20px;">
               <a>Haiyang Sun</a><sup>1</sup></span>
           </div>
@@ -84,9 +84,7 @@
           </div>
 
           <div class="is-size-5 publication-authors" style="margin-top: 10px;">
-            <span class="author-block"><sup>*</sup>Equal contribution,</span>
-            <span class="author-block" style="margin-left: 10px;"><sup>†</sup>Project leader,</span>
-            <span class="author-block" style="margin-left: 10px;"><sup>✉</sup>Corresponding author</span>
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
           </div>
 
           <div class="column has-text-centered">
@@ -146,9 +144,255 @@
     <!-- Videos Card -->
     <div class="section-card">
       <h2 class="title is-3">Qualitative Comparison</h2>
-        <video poster="" id="scene0" autoplay controls muted loop playsinline>
-          <source src="./static/videos/PointForward.mp4" type="video/mp4">
-        </video>
+
+      <div class="qc-tab-buttons">
+        <button class="qc-tab-btn active" onclick="showQCTab(this, 'qc-inter')">Interpolation</button>
+        <button class="qc-tab-btn" onclick="showQCTab(this, 'qc-extra')">Extrapolation</button>
+      </div>
+
+      <div id="qc-inter" class="qc-tab-panel active">
+        <div class="gallery-container">
+          <button class="gallery-arrow prev" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="gallery-scroller">
+            <div id="inter-grid" class="demo-grid">
+              <div class="demo-item">
+                <video id="2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="6" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/6.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="17" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/17.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="31" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/31.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="44" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/44.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="50" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/50.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="72" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/72.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="77" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/77.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="79" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/79.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="85" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/85.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="86" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/86.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="97" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/97.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="104" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/104.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="110" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/110.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="143" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/interpolation/143.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <button class="gallery-arrow next" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+        <div class="gallery-dots" id="inter-dots">
+          <button class="gallery-dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="gallery-dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="gallery-dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="gallery-dot" data-index="3" aria-label="Slide 4"></button>
+          <button class="gallery-dot" data-index="4" aria-label="Slide 5"></button>
+          <button class="gallery-dot" data-index="5" aria-label="Slide 6"></button>
+          <button class="gallery-dot" data-index="6" aria-label="Slide 7"></button>
+          <button class="gallery-dot" data-index="7" aria-label="Slide 8"></button>
+          <button class="gallery-dot" data-index="8" aria-label="Slide 9"></button>
+          <button class="gallery-dot" data-index="9" aria-label="Slide 10"></button>
+          <button class="gallery-dot" data-index="10" aria-label="Slide 11"></button>
+          <button class="gallery-dot" data-index="11" aria-label="Slide 12"></button>
+          <button class="gallery-dot" data-index="12" aria-label="Slide 13"></button>
+          <button class="gallery-dot" data-index="13" aria-label="Slide 14"></button>
+          <button class="gallery-dot" data-index="14" aria-label="Slide 15"></button>
+        </div>
+      </div>
+
+      <div id="qc-extra" class="qc-tab-panel">
+        <div class="gallery-container">
+          <button class="gallery-arrow prev" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <div class="gallery-scroller">
+            <div id="extra-grid" class="demo-grid">
+              <div class="demo-item">
+                <video id="18" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/18.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="20" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/20.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="24" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/24.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="28" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/28.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="40" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/40.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="84" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/84.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="93" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/93.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="105" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/105.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="123" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/123.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="125" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/125.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="130" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/130.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="135" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/135.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="147" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/147.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="149" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/149.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="159" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/159.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="171" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/171.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="184" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/184.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="189" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/189.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="197" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/197.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="demo-item">
+                <video id="198" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/extrapolation/198.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <button class="gallery-arrow next" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+        <div class="gallery-dots" id="extra-dots">
+          <button class="gallery-dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="gallery-dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="gallery-dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="gallery-dot" data-index="3" aria-label="Slide 4"></button>
+          <button class="gallery-dot" data-index="4" aria-label="Slide 5"></button>
+          <button class="gallery-dot" data-index="5" aria-label="Slide 6"></button>
+          <button class="gallery-dot" data-index="6" aria-label="Slide 7"></button>
+          <button class="gallery-dot" data-index="7" aria-label="Slide 8"></button>
+          <button class="gallery-dot" data-index="8" aria-label="Slide 9"></button>
+          <button class="gallery-dot" data-index="9" aria-label="Slide 10"></button>
+          <button class="gallery-dot" data-index="10" aria-label="Slide 11"></button>
+          <button class="gallery-dot" data-index="11" aria-label="Slide 12"></button>
+          <button class="gallery-dot" data-index="12" aria-label="Slide 13"></button>
+          <button class="gallery-dot" data-index="13" aria-label="Slide 14"></button>
+          <button class="gallery-dot" data-index="14" aria-label="Slide 15"></button>
+          <button class="gallery-dot" data-index="15" aria-label="Slide 16"></button>
+          <button class="gallery-dot" data-index="16" aria-label="Slide 17"></button>
+          <button class="gallery-dot" data-index="17" aria-label="Slide 18"></button>
+          <button class="gallery-dot" data-index="18" aria-label="Slide 19"></button>
+          <button class="gallery-dot" data-index="19" aria-label="Slide 20"></button>
+        </div>
+      </div>      
     </div>
 
     <!-- BibTeX Card -->
@@ -171,7 +415,7 @@
       <div class="column is-8">
         <div class="content has-text-centered">
           <p>
-            This webpage template is based on <a href="https://streetforward.github.io/">StreetForward</a>.
+            This webpage template is based on <a href="https://nerfies.github.io">Nerfies</a>.
           </p>
         </div>
       </div>
@@ -180,6 +424,10 @@
 </footer>
 
 <script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.qc-tab-btn.active')?.click();
+});
+
 function copyBibtex() {
   var code = document.getElementById('bibtex-code').innerText;
   navigator.clipboard.writeText(code).then(function() {
@@ -201,20 +449,29 @@ function showQCTab(btn, panelId) {
     v.play().catch(function(){});
   });
 
-  if (panelId === 'qc-temporal') {
+  if (panelId === 'qc-inter') {
     setTimeout(function() {
-      var container = document.querySelector('#qc-temporal .gallery-container');
-      if (container) setupGallery(container);
+      var container = document.querySelector('#qc-inter .gallery-container');
+      if (container) setupGallery(container, panelId);
+    }, 0);
+  }
+
+  if (panelId === 'qc-extra') {
+    setTimeout(function() {
+      var container = document.querySelector('#qc-extra .gallery-container');
+      if (container) setupGallery(container, panelId);
     }, 0);
   }
 }
 
-function setupGallery(container) {
+function setupGallery(container, panelId) {
   var grid = container.querySelector('.demo-grid');
   var prevBtn = container.querySelector('.gallery-arrow.prev');
   var nextBtn = container.querySelector('.gallery-arrow.next');
   var items = grid ? grid.querySelectorAll('.demo-item') : [];
-  var dots = document.querySelectorAll('#temporal-dots .gallery-dot');
+  
+  if (panelId === 'qc-inter') var dots = document.querySelectorAll('#inter-dots .gallery-dot');
+  if (panelId === 'qc-extra') var dots = document.querySelectorAll('#extra-dots .gallery-dot');
 
   if (!grid || !prevBtn || !nextBtn || items.length === 0) return;
 
